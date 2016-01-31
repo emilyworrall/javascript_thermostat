@@ -38,11 +38,6 @@ $(document).ready(function() {
     });
   });
 
-  $.get('http://api.wunderground.com/api/0e4f8aaf85ce8971/conditions/q/England/London.json', function(data) {
-    $('#location').text(data.current_observation.display_location.full);
-    $('#current-temp').text(data.current_observation.temp_c);
-    $('#conditions').text(data.current_observation.weather);
-  });
 
   function updateTemperature() {
     $('#temperature').text(thermostat.temperature);
